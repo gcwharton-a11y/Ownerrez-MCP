@@ -1,0 +1,3 @@
+# ownerrez-mcp
+
+Setting up...
