@@ -1,0 +1,19 @@
+# Render Blueprint — lets you deploy this with "New + > Blueprint" in the
+# Render dashboard instead of clicking through a manual web-service setup.
+# Docs: https://render.com/docs/blueprint-spec
+services:
+  - type: web
+    name: ownerrez-mcp
+    runtime: docker
+    plan: starter
+    region: oregon
+    healthCheckPath: /health
+    envVars:
+      - key: MCP_ACCESS_TOKEN
+        sync: false
+      - key: OWNERREZ_USERNAME
+        sync: false
+      - key: OWNERREZ_TOKEN
+        sync: false
+      - key: OWNERREZ_READ_ONLY
+        value: "1"
